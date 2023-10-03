@@ -6,10 +6,12 @@ classDiagram
     User <|-- Admin
 
     Artist "0..*" -- "1" Admin
-    MusicDatabase "1..*" o-- "0..*" Artist
-    MusicDatabase "1..*" o-- "0..*" Admin
+    MusicDatabase "1" o-- "0..*" Artist
+    MusicDatabase "1" o-- "0..*" Admin
+    MusicDatabase "1" --o "0..*" PlayList DB
     Subscriber "1" o-- "0..*" MusicDatabase
     Subscriber "1" -- "0..*" Subscription
+    Subscriber "1" o-- "0..*" PlayList DB
     Payment "1..*" <-- "1" Subscription
     
     Payment <|-- PayPal
@@ -32,8 +34,23 @@ classDiagram
         + logOut()
         + updateProfile()
         + searchMusic()
-        + managaePlaylist()
+        + playSong()
+        + stopSong()
+        + nextSong()
+        + prevSong()
+        + managaePlaylists()
         + verifySubscription()
+    }
+    class PlayList DB{
+        - PlayListName : String
+        - MusicCatagory : String
+        - ArtistID : Int
+        - SongID : Int
+        - SongName : String
+        + addSong()
+        + deleteSong()
+        + addPlayList()
+        + deletePlayList() 
     }
     class Artist{
         - ArtistID : Int
