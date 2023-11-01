@@ -1,1 +1,15 @@
+UNIT TESTING
 
+
+Revenue Calulator:
+
+Input: Total ads played through artist's page within a week. Total = 20
+
+Output: returns 20 * .05 as an estimated revenue accrued. Revenue = 1 dollar
+
+
+Info Display:
+
+Input: Song name and artist 
+
+Output: Song date of release, album cover, and description provided by Allmusic API
