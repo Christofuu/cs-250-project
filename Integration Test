@@ -1,0 +1,29 @@
+# Integration Test - Add and Remove Songs and Albums / Play or Pause music / Verify artist account
+#Create an artist account and log in
+artist = artist.account("TestArtist", "password")
+login(artist)
+
+#Add a song to the artist's profile
+s.name = "TestSong"
+add.stoprofile(artist, s.name)
+
+#Verify that the song is listed in the artist's profile
+artistprofile = getartist.profile(artist)
+if s.name == artistprofile.s[0]:
+    #Play the added song
+    play.s(artist, s.name)
+
+    #Attempt to remove the song
+    remove.s(artist, s.name)
+
+    # Verify that the song is no longer present in the artist's profile
+    artistprofile = getartist.profile(artist)
+    if s.name not in artistprofile.s:
+        # Song is successfully removed
+        return "Integration test passed"
+    else:
+        # Song is still present after removal
+        return "Integration test failed"
+else:
+    # Song is not listed in the artist's profile
+    return "Integration test failed"
