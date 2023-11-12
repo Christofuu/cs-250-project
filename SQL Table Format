@@ -26,10 +26,10 @@
 | 3           |        Rock        |
 
 *Songs*
-| SongID(int) PK | GID(int) FK | SongName(varchar(45))   |  AlbumnName(varchar(45)) |  Released  | AID(int) FK |
-| -------------- | ----------- | ----------------------- | ------------------------ | ---------- | ----------- |
-| 1              | 1           |       Rockstar          |      BLAME IT ON BABAY   | 04.17.2020 | 1           |
-| 2              | 1           |       Suge              |      Baby On Baby        | 03.01.2019 | 1           |
-| 3              | 2           |       Keep you (close)  |      PLAY:GRID           | 09.15.2023 | 2           |
-| 4              | 2           |       Silo              |      Sable Valley Summer | 09.02.2022 | 2           |
-| 5              | 1           |       Masterpiece       |      Masterpiece         | 01.15.2021 | 1           |
+| SongID(int) PK | GID(int) FK | SongName(varchar(45))   |  AlbumnName(varchar(45)) |  Released  | AID(int) FK | UserID(int) FK |
+| -------------- | ----------- | ----------------------- | ------------------------ | ---------- | ----------- | -------------- |
+| 1              | 1           |       Rockstar          |      BLAME IT ON BABAY   | 04.17.2020 | 1           | 2              |
+| 2              | 1           |       Suge              |      Baby On Baby        | 03.01.2019 | 1           | 2              |
+| 3              | 2           |       Keep you (close)  |      PLAY:GRID           | 09.15.2023 | 2           | 3              |
+| 4              | 2           |       Silo              |      Sable Valley Summer | 09.02.2022 | 2           | 3              |
+| 5              | 1           |       Masterpiece       |      Masterpiece         | 01.15.2021 | 1           | 2              |
