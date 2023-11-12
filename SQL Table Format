@@ -1,0 +1,35 @@
+*Users*
+| UID(int) PK | UserName(varchar(45)) | PassWord(varchar(45)) | Sub(bool) | UserID(int) FK |
+| ----------- | --------------------- | --------------------- | --------- | -------------- |
+| 1           |       CoolGuy         |        30fryTool      |   TRUE    | 1              |
+| 2           |       DaBaby          |        3217donut      |   TRUE    | 2              |
+| 3           |       RlGrime         |        36tuff96       |   TRUE    | 3              |
+
+*User Info*
+| UserID(int) PK | UserFN(varchar(45)) | UserLN(varchar(45)) | DOB(date)  |       UserEmail      |
+| -------------- | ------------------- | ------------------- | ---------- | -------------------- |
+| 1              |        Jacob        |       Collins       | 10.12.2000 | Jcollins@gmail.com   |
+| 2              |        Jon          |       Kirk          | 12.22.1991 | realdababy@yahoo.com |
+| 3              |        Henry        |       Steinway      | 02.08.1991 | rlgrime@gmail.com    |
+
+*Artist ID*
+| AID(int) PK | ArtistName(varchar(45)) |
+| ----------- | ----------------------- |
+| 1           |         DaBaby          |
+| 2           |         RlGrime         |
+
+*Genres*
+| GID(int) PK | Genre(varchar(45)) |
+| ----------- | ------------------ |
+| 1           |        Rap         |
+| 2           |        EDM         |
+| 3           |        Rock        |
+
+*Songs*
+| SongID(int) PK | GID(int) FK | SongName(varchar(45))   |  AlbumnName(varchar(45)) |  Released  | AID(int) FK |
+| -------------- | ----------- | ----------------------- | ------------------------ | ---------- | ----------- |
+| 1              | 1           |       Rockstar          |      BLAME IT ON BABAY   | 04.17.2020 | 1           |
+| 2              | 1           |       Suge              |      Baby On Baby        | 03.01.2019 | 1           |
+| 3              | 2           |       Keep you (close)  |      PLAY:GRID           | 09.15.2023 | 2           |
+| 4              | 2           |       Silo              |      Sable Valley Summer | 09.02.2022 | 2           |
+| 5              | 1           |       Masterpiece       |      Masterpiece         | 01.15.2021 | 1           |
