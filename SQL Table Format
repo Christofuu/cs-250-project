@@ -33,3 +33,18 @@
 | 3              | 2           |       Keep you (close)  |      PLAY:GRID           | 09.15.2023 | 2           | 3              |
 | 4              | 2           |       Silo              |      Sable Valley Summer | 09.02.2022 | 2           | 3              |
 | 5              | 1           |       Masterpiece       |      Masterpiece         | 01.15.2021 | 1           | 2              |
+
+
+Summary:
+There are two databases. The USER DB contains the basic info with one table containing identifying information and another table 
+containing the basic info such as first and last name, date of birth, etc. The SONG DB contains the name of the songs, release, genre, and artist.
+
+Reasoning:
+SQL was a simple choice given the databases are straightforward and can handle large amounts of data. Although other options such as NoSQL would
+provide faster access and more flexibility, the option was out of scope for simplicity reasons.
+
+For the USER DB, initially we thought to separate the user types to easily distinguish between the artist and listeners and tie the artist to their
+music, however we chose to scratch the connect entirely and just assign the name of the artist with the rest of the song information.
+
+For the SONGS DB, initially the songs database was much simpler, but we thought that there were more about the songs that needed to be included such
+as date of release and genre. This would allow for a more general search, like for example and listener may want to search for just one genre rather than a specific artist. 
